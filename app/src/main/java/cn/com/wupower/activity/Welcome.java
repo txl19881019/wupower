@@ -4,6 +4,7 @@ package cn.com.wupower.activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 
 import cn.com.wupower.R;
 
@@ -15,6 +16,7 @@ public class Welcome extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.d(TAG,"onCreate");
         setContentView(R.layout.activity_welcome);
         handler = new Handler();
         runnable = new Runnable() {
@@ -24,7 +26,7 @@ public class Welcome extends BaseActivity {
                 finish();
             }
         };
-        handler.postDelayed(runnable,5000);
+        handler.postDelayed(runnable,3000);
     }
 
     @Override

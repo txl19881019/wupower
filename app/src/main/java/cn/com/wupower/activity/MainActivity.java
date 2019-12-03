@@ -24,6 +24,7 @@ public class MainActivity extends BaseActivity {
                 new Thread(new Runnable() {
                     @Override
                     public void run() {
+                        Log.d(TAG,Thread.currentThread().getName());
                     }
                 }).start();
             }
